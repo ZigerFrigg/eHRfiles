@@ -1,0 +1,16 @@
+[Wed Feb 04 2026 12:56:16 GMT+0100 (Mitteleuropäische Normalzeit)] ERROR Error: ENOENT: no such file or directory, open 'C:\Users\baur\Desktop\Projects\eFiles\ehrfiles-mockup\config\app.yml'
+    at Object.readFileSync (node:fs:440:20)
+    at Object.readConfig (C:\Users\baur\AppData\Local\npm-cache\_npx\e9b5c1049b212f24\node_modules\yaml-config\lib\yaml-config.js:57:25)
+    at Object.<anonymous> (C:\Users\baur\AppData\Local\npm-cache\_npx\e9b5c1049b212f24\node_modules\psql\lib\config.js:2:23)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\baur\\Desktop\\Projects\\eFiles\\ehrfiles-mockup\\config\\app.yml'
+}

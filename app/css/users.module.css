@@ -1,0 +1,718 @@
+/* ===== Page Layout ===== */
+
+.page {
+  padding: 24px;
+  background: #fafafa;
+  min-height: 100vh;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* ===== Actions ===== */
+
+.actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid #cfcfcf;
+  background: #caeefb;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #f0f0f0;
+}
+
+.buttonPrimary {
+  border-color: #666666;
+  background: #caeefb;
+  color: black;
+}
+
+.buttonPrimary:hover {
+  background: #106ebe;
+  color: white;
+}
+
+/* ===== Cards / Sections (default) ===== */
+
+.card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  font-size: 1rem;
+}
+
+/* ===== Search Panel ===== */
+
+.searchPanel {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.searchTitle {
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.searchGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.field label {
+  display: block;
+  font-size: 0.8rem;
+  margin-bottom: 4px;
+  color: #444;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  padding: 7px 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.85rem;
+}
+
+/* Read-only / disabled */
+.field input:disabled,
+.field select:disabled,
+.field textarea:disabled {
+  background-color: #f0f0f0;
+  color: #555;
+  border-color: #d0d0d0;
+  cursor: not-allowed;
+}
+
+.field input:not(:disabled),
+.field select:not(:disabled),
+.field textarea:not(:disabled) {
+  background-color: #ffffff;
+}
+
+.field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  padding: 6px 8px;
+  font-family: inherit;
+  font-size: 10pt;
+}
+
+/* ===== Table ===== */
+
+.tableInfo {
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table th {
+  background: #f3f3f3;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.table td {
+  padding: 10px;
+  font-size: 0.85rem;
+  border-bottom: 1px solid #eee;
+}
+
+.table tr:hover td {
+  background: #f9f9f9;
+}
+
+/* ===== Icon Buttons (ONE definitive style) ===== */
+
+.iconButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #e7f7fd;
+  color: black;
+
+  border-radius: 8px;
+  border: 1px solid #ccc;
+
+  padding: 0px 5px;
+  cursor: pointer;
+
+  text-decoration: none;
+}
+
+.iconButton:hover {
+  background: #f0f0f0;
+}
+
+button.iconButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ===== Modal ===== */
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  width: min(720px, 100%);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.modalTitle {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 1.2rem;
+}
+
+.modalGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* ===== Status ===== */
+
+.status {
+  font-size: 0.85rem;
+  color: #333;
+}
+
+.error {
+  color: #b00020;
+}
+
+/* ===== Filter and Search Bar ===== */
+
+.filterBar {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+  background-color: #d0d0d0;
+  padding: 12px;
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.filterGroup input {
+  min-width: 160px;
+  border: 1px solid #cfcfcf;
+  background-color: #ffffff;
+}
+
+/* ===== Paging ===== */
+
+.paginationBar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: nowrap;
+}
+
+.pageIndicator {
+  white-space: nowrap;
+}
+
+.pageSizeGroup {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pageSizeSelect {
+  font-family: inherit;
+  font-size: 0.8rem;
+  padding: 2px 4px;
+  height: auto;
+}
+
+/* ===== Link Button (group toggle) ===== */
+
+.linkButton {
+  border: none;
+  background: none;
+  padding: 0;
+  color: #106ebe;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.link {
+  color: #106ebe;
+  text-decoration: underline;
+}
+
+/* ===== Collapsible headers (Dossier) ===== */
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  margin-top: 14px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.sectionTitle {
+  margin: 0;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.collapseIcon {
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* ===== Admin Doc Box ===== */
+
+.adminDocBox {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fbe3d6;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.adminDocBox p {
+  margin: 0 0 0.75em 0;
+}
+
+.adminDocBox p:last-child {
+  margin-bottom: 0;
+}
+
+/* ===================================================================== */
+/* ===== Upload Page Theme (scoped, so it won't affect other pages) ===== */
+/* ===================================================================== */
+
+.uploadTheme .card {
+  background: #d2d2d2;
+}
+
+.uploadTheme .dropZone,
+.uploadTheme .sectionBox {
+  background: #e8f3ff;
+}
+
+.dropZone {
+  border: 2px dashed #ccc;
+  border-radius: 12px;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+.dropZone:hover {
+  background-color: #e8f2ff;
+  border-color: #7aaeff;
+}
+
+.twoColGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.sectionGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.sectionBox {
+  border: 1px solid #e2e2e2;
+  border-radius: 10px;
+  padding: 12px;
+  background: #fff;
+}
+
+/* Upload-only section header style (name collision fixed by scoping) */
+.uploadTheme .sectionHeader {
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Excel-like label layout, scoped */
+.uploadTheme .card .twoColGrid .field,
+.uploadTheme .card .formGrid .field {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  column-gap: 12px;
+  align-items: center;
+}
+
+.uploadTheme .card .twoColGrid .field label,
+.uploadTheme .card .formGrid .field label {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #444;
+  text-align: right;
+  padding-right: 6px;
+}
+
+/* Keep editable inputs white (scoped) */
+.uploadTheme .card .twoColGrid .field input:not(:disabled),
+.uploadTheme .card .twoColGrid .field select:not(:disabled),
+.uploadTheme .card .formGrid .field input:not(:disabled),
+.uploadTheme .card .formGrid .field select:not(:disabled),
+.uploadTheme .card .formGrid .field textarea:not(:disabled) {
+  background: #ffffff;
+}
+
+/* Read-only/disabled fields grey (scoped) */
+.uploadTheme .card .twoColGrid .field input:disabled,
+.uploadTheme .card .twoColGrid .field select:disabled,
+.uploadTheme .card .formGrid .field input:disabled,
+.uploadTheme .card .formGrid .field select:disabled,
+.uploadTheme .card .formGrid .field textarea:disabled {
+  background: #f0f0f0;
+  color: #555;
+  border-color: #d0d0d0;
+  cursor: not-allowed;
+}
+
+/* Vertical spacing inside details (scoped) */
+.uploadTheme .card details .field {
+  margin-bottom: 10px;
+}
+
+/* ===== Step Progress (Bulk Upload) ===== */
+
+.stepProgress {
+  margin: 10px 0 14px 0;
+}
+
+.stepProgressHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stepDot {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid #cfcfcf;
+  background: #f0f0f0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-family: inherit;
+}
+
+.stepDotActive {
+  background: #dfefff;
+  border-color: #9fc4ff;
+}
+
+.stepLine {
+  flex: 1;
+  height: 4px;
+  background: #e5e5e5;
+  border-radius: 4px;
+}
+
+.stepLineActive {
+  background: #9fc4ff;
+}
+
+.stepProgressLabels {
+  margin-top: 6px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.stepLabel {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.stepLabelActive {
+  font-size: 0.85rem;
+  color: #222;
+  font-weight: 600;
+}
+
+/* ===== Busy overlay + progress ===== */
+
+.busyOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.busyModal {
+  width: min(520px, 92vw);
+  background: #fff;
+  border: 1px solid #d0d0d0;
+  border-radius: 10px;
+  padding: 16px 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 12px;
+}
+
+.spinner {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 4px solid #e0e0e0;
+  border-top-color: #5a9bff;
+  animation: spin 0.9s linear infinite;
+  margin-top: 2px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.busyText {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.busyTitle {
+  font-weight: 700;
+}
+
+.busySub {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.progressWrap {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.progressBar {
+  flex: 1;
+  height: 10px;
+  background: #eee;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+
+.progressFill {
+  height: 100%;
+  background: #5a9bff;
+  width: 0%;
+  transition: width 220ms ease;
+}
+
+.progressPct {
+  width: 48px;
+  text-align: right;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* Highlighted key input fields (Step 2) */
+.keyInput {
+  background-color: #eef5ff;
+  border: 1px solid #8fb8ff;
+}
+
+.keyInput:focus {
+  outline: none;
+  background-color: #ffffff;
+  border-color: #4a90ff;
+  box-shadow: 0 0 0 2px rgba(74, 144, 255, 0.15);
+}
+
+.pageInfoBox {
+  width: 100%;
+  padding: 12px 14px;
+  margin: 10px 0 16px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #FBE3D6;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.pageInfoBox p {
+  margin: 0 0 0.75em 0;
+}
+
+.pageInfoBox p:last-child {
+  margin-bottom: 0;
+}
+
+/* Checkbox-Zeile im Modal */
+.checkboxRow {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Einzelne Checkbox + Text */
+.checkboxItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+/* 👉 Checkbox-Größe */
+.checkboxItem input[type="checkbox"] {
+  transform: scale(1.2);     /* 1.0 = normal | 1.2–1.4 gut */
+  transform-origin: left center;
+  cursor: pointer;
+}
+
+/* 👉 Text kleiner machen */
+.checkboxItem span {
+  font-size: 0.85rem;        /* kleiner als Standard */
+  line-height: 1.2;
+}
+/* generic disabled style for links/buttons */
+.disabledButton {
+  opacity: 0.55;
+  cursor: not-allowed !important;
+  filter: grayscale(1);
+}
+
+/* optional: make primary disabled more obviously grey */
+.buttonPrimary.disabledButton {
+  background: #9aa0a6 !important;
+  border-color: #9aa0a6 !important;
+  color: #fff !important;
+}
+/* Danger button (delete) */
+.buttonDanger {
+  background: #c0392b;
+  border: 1px solid #c0392b;
+  color: #fff;
+}
+
+.buttonDanger:hover {
+  filter: brightness(0.95);
+}
+
+.buttonDangerOutline {
+  background: transparent;
+  border: 1px solid #c0392b;
+  color: #c0392b;
+}
+
+.buttonDangerOutline:hover {
+  background: rgba(192, 57, 43, 0.08);
+}
+
+/* Disabled should still win */
+.buttonDanger.disabledButton,
+.buttonDangerOutline.disabledButton {
+  background: #9aa0a6 !important;
+  border-color: #9aa0a6 !important;
+  color: #fff !important;
+}
+.legalHoldBanner {
+  margin: 10px 0 12px;
+  padding: 10px 12px;
+  border: 1px solid #c0392b;
+  background: rgba(192, 57, 43, 0.08);
+  border-radius: 10px;
+  color: #8e2b21;
+  font-weight: 700;
+}
+
+.legalHoldField {
+  border: 1px solid #c0392b;
+  background: rgba(192, 57, 43, 0.06);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.legalHoldField label {
+  color: #c0392b;
+  font-weight: 700;
+}
