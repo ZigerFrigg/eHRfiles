@@ -32,7 +32,7 @@ export default function FrameHomePage() {
       </div>
 
       <div className={styles.card}>
-        <div className={styles.searchTitle}>Switch User (for testing only)</div>
+        <div className={styles.searchTitle}>Switch User</div>
 
         <div className={styles.searchGrid} style={{ marginTop: 10 }}>
           <div className={styles.field} style={{ gridColumn: "1 / -1" }}>
@@ -44,7 +44,7 @@ export default function FrameHomePage() {
                 </option>
               ))}
             </select>
-            <small>Selection is stored in localStorage and will be restored after reload.</small>
+            <small></small>
           </div>
         </div>
       </div>
