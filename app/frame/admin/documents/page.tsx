@@ -479,7 +479,7 @@ async function doDeleteDocument() {
                 </div>
 
                 <div className={styles.field}>
-                  <label>GEB Member</label>
+                  <label>BoD Member</label>
                   <select value={String(!!editRow.e_geb)} onChange={(e) => setEditRow((p) => (p ? { ...p, e_geb: e.target.value === "true" } : p))} disabled={editSaving}>
                     <option value="false">no</option>
                     <option value="true">yes</option>

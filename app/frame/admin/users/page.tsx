@@ -237,7 +237,7 @@ export default function AdminUsersPage() {
 
 
           <div className={styles.field}>
-            <label>GEB Access</label>
+            <label>BoD Access</label>
             <select
               value={filters.u_geb ?? ""}
               onChange={(e) => setFilters((p) => ({ ...p, u_geb: e.target.value }))}
@@ -265,7 +265,7 @@ export default function AdminUsersPage() {
             <th>Role</th>
             <th>Country Access</th>
             <th>HR Access</th>
-            <th>GEB Access</th>
+            <th>BoD Access</th>
           </tr>
         </thead>
         <tbody>
@@ -375,7 +375,7 @@ export default function AdminUsersPage() {
                     onChange={(e) => setEditRow((p) => (p ? { ...p, u_geb: e.target.checked } : p))}
                     disabled={editSaving}
                   />
-                  <span>GEB Access</span>
+                  <span>BoD Access</span>
                 </label>
               </div>
             </div>

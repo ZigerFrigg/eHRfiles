@@ -560,7 +560,7 @@ export default function UserDossierPage() {
                   <input value={yesNo(employee.e_hr)} disabled />
                 </div>
                 <div className={styles.field}>
-                  <label>GEB Member</label>
+                  <label>BoD Member</label>
                   <input value={yesNo(employee.e_geb)} disabled />
                 </div>
               </div>
@@ -598,7 +598,7 @@ export default function UserDossierPage() {
                 <input value={restrictionSummary.hr} disabled />
               </div>
               <div className={styles.field}>
-                <label>You have GEB access</label>
+                <label>You have BoD access</label>
                 <input value={restrictionSummary.geb} disabled />
               </div>
               <div className={styles.field}>
@@ -875,7 +875,7 @@ export default function UserDossierPage() {
                 </div>
 
                 <div className={styles.field}>
-                  <label>GEB Member</label>
+                  <label>BoD Member</label>
                   <select
                     value={String(!!editRow.e_geb)}
                     onChange={(e) => setEditRow((p) => (p ? { ...p, e_geb: e.target.value === "true" } : p))}

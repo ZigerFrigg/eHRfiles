@@ -631,7 +631,7 @@ export default function AdminEmployeesPage() {
             </th>
             <th>
               <button type="button" className={styles.linkLike} onClick={() => toggleSort("e_geb")}>
-                GEB{sortIndicator("e_geb")}
+                BoD{sortIndicator("e_geb")}
               </button>
             </th>
             <th>
@@ -878,7 +878,7 @@ export default function AdminEmployeesPage() {
                     onChange={(e) => setEditRow((p) => (p ? { ...p, e_geb: e.target.checked } : p))}
                     disabled={editSaving}
                   />
-                  GEB Member
+                  BoD Member
                 </label>
               </div>
 
