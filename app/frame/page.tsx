@@ -20,7 +20,7 @@ export default function FrameHomePage() {
       const geb = yesNo(u.u_geb);
       return {
         value: u.u_id,
-        label: `${u.u_id} | ${u.u_email} | ${u.u_role} | ${country} | HR: ${hr} | GEB: ${geb}`,
+        label: `${u.u_id} | ${u.u_email} | ${u.u_role} | ${country} | HR: ${hr} | BoD: ${geb}`,
       };
     });
   }, [users]);
